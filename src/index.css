@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0E2A20;
+  --color-inkSoft: #153A2A;
+  --color-paper: #FFFFFF;
+  --color-paperSoft: #F2FBF6;
+  --color-paperDeep: #E3F5EA;
+  --color-brand: #12925A;
+  --color-brandBright: #3EE08C;
+  --color-brandDeep: #0A5C3A;
+  --color-danger: #D14343;
+
+  --font-display: "Sora", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--color-brandBright);
+  color: var(--color-ink);
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Signature element: radiating connection pulse */
+.pulse-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(62, 224, 140, 0.45);
+  animation: pulseOut 3s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+}
+.pulse-ring.d2 { animation-delay: 1s; }
+.pulse-ring.d3 { animation-delay: 2s; }
+@keyframes pulseOut {
+  0% { transform: scale(0.3); opacity: 0.9; }
+  100% { transform: scale(2.4); opacity: 0; }
+}
+
+.node-orbit {
+  animation: orbit 14s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-ring, .node-orbit { animation: none; }
+}
+
+.grain {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.card-hover {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .chev { transform: rotate(45deg); }
+
+/* Plan selector (signup form) */
+.plan-card {
+  transition: border-color .15s ease, background-color .15s ease, transform .15s ease;
+}
+.plan-radio:checked + .plan-card {
+  border-color: var(--color-brand);
+  background-color: var(--color-paperSoft);
+  box-shadow: 0 0 0 3px rgba(18, 146, 90, 0.15);
+}
+.plan-radio:checked + .plan-card .plan-dot {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+}
+.plan-radio:checked + .plan-card .plan-dot::after { transform: scale(1); }
+.plan-radio:focus-visible + .plan-card {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+.plan-dot { position: relative; }
+.plan-dot::after {
+  content: '';
+  position: absolute; inset: 3px;
+  border-radius: 9999px;
+  background: #fff;
+  transform: scale(0);
+  transition: transform .15s ease;
+}
+
+.fade-in { animation: fadeIn .35s ease both; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
