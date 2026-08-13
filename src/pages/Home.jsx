@@ -7,16 +7,20 @@ import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
 import Cta from '@/components/Cta';
-import CallToAction from '../components/call';
+import CallToAction from '../components/tasks';
+import AboutSection from '../components/aboutus';
+import TasksSection from '../components/tasks';
 
 export default function Home() {
   return (
     <div className="bg-paper text-ink antialiased">
       <Header />
       <Hero />
+      <TasksSection/>
       <HowItWorks />
-      <Plans />
-      <Features />
+       <Features />
+      <AboutSection />
+     
       <Faq />
       <Cta />
       <Footer />
