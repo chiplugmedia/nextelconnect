@@ -7,6 +7,7 @@ import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
 import Cta from '@/components/Cta';
+import CallToAction from '../components/call';
 
 export default function Home() {
   return (
@@ -16,7 +17,6 @@ export default function Home() {
       <HowItWorks />
       <Plans />
       <Features />
-      <Testimonials />
       <Faq />
       <Cta />
       <Footer />

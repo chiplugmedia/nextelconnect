@@ -11,10 +11,10 @@ export default function Cta() {
             No shop visit, no physical SIM to lose. Just your phone and a QR code.
           </p>
           <a
-            href="#plans"
+            href="/register"
             className="inline-block mt-8 bg-brandBright text-ink font-semibold rounded-full px-8 py-3.5 hover:bg-brandBright/90 transition"
           >
-            Get your eSIM
+            Get Started
           </a>
         </div>
       </div>

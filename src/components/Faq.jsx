@@ -1,11 +1,11 @@
 const FAQS = [
   {
-    q: 'Do I need a special phone for eSIM?',
-    a: 'Most phones from 2019 onward support eSIM, including iPhone XS and later, and most Galaxy and Pixel devices. Check your phone\'s settings under "Add eSIM" to confirm before signing up.',
+    q: 'What is Nextel Connect?',
+    a: 'Nextel Connect is a licensed virtual telecom operator that lets Nigerians hold an eSIM and manage contacts on partner carrier networks. The platform offers 7 activity areas: Call activity tracking, Real-time dashboard, Massive market, Airtime + data on activation, Network transfer, Nextel ATM card, and Safe, fast & secure. Members get rewarded for activity on the network. Rewards subject to change.',
   },
   {
-    q: 'Can I keep my current phone number?',
-    a: 'Yes. Start a port-in request from the app with your current number and network — most transfers complete within 24 hours, and your old line stays active until it does.',
+    q: 'How much does membership cost?',
+    a: 'Choose Any Plan of your choice. One-time payment per membership, no recurring fees, no hidden charges, and no auto-renewals.',
   },
   {
     q: "What happens if I don't renew my plan?",
@@ -22,9 +22,9 @@ export default function Faq() {
     <section id="faq" className="bg-inkSoft text-paper">
       <div className="max-w-7xl mx-auto px-5 sm:px-8 py-16 md:py-28">
         <div className="max-w-2xl">
-          <span className="font-mono text-xs uppercase tracking-widest text-brandBright">Questions</span>
+          <span className="font-mono text-xs uppercase tracking-widest text-brandBright">FA Questions</span>
           <h2 className="font-display font-bold text-3xl sm:text-4xl mt-3 tracking-tight">
-            Before you scan the code.
+            We've answered the most common questions about the Nextel eSIM membership.
           </h2>
         </div>
 
